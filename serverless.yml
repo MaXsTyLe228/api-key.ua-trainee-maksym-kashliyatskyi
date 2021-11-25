@@ -4,7 +4,6 @@ service: server
 
 frameworkVersion: '2 || 3'
 
-
 provider:
   name: aws
   runtime: nodejs12.x
@@ -17,6 +16,7 @@ functions:
       - http:
           method: get
           path: hello
+          cors: true
 
 plugins:
   - serverless-offline

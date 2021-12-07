@@ -1,27 +1,22 @@
 const columnRepository = require("../repositories/columnsRepository");
 
 
-module.exports.createColumnService = async (params, callback) => {
-    const req = await columnRepository.createCol(params, callback)
-    return req;
+module.exports.getAllColumnsService = (params, callback) => {
+    return columnRepository.getAllCol(params, callback);
 }
 
-module.exports.getAllColumnsService = async (params, callback) => {
-    const req = await columnRepository.getAllCol(params, callback)
-    return req;
+module.exports.getColumnService = (params, callback) => {
+    return columnRepository.getCol(params, callback);
 }
 
-module.exports.getColumnService = async (params, callback) => {
-    const req = await columnRepository.getCol(params, callback)
-    return req;
+module.exports.createColumnService = (params, callback) => {
+    return columnRepository.createCol(params, callback);
 }
 
-module.exports.deleteColumnService = async (params, callback) => {
-    const req = await columnRepository.deleteCol(params, callback)
-    return req;
+module.exports.deleteColumnService = (params, callback) => {
+    return columnRepository.deleteCol(params, callback);
 }
 
-module.exports.updateColumnService = async (params, callback) => {
-    const req = await columnRepository.updateCol(params, callback)
-    return req;
+module.exports.updateColumnService = (params, callback) => {
+    return columnRepository.updateCol(params, callback);
 }

@@ -6,9 +6,8 @@ const fetchDB = (callback) => {
             callback(null, {
                 statusCode: error.statusCode || 501,
                 headers: {"Content-Type": "text/plain"},
-                body: "Couldn't fetch the todos."
+                body: "Couldn't fetch."
             });
-            return;
         }
 
         // create a response
@@ -17,7 +16,7 @@ const fetchDB = (callback) => {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             },
-            body: JSON.stringify(result),//result.Item
+            body: JSON.stringify(result),
         };
         callback(null, response);
     }

@@ -11,12 +11,85 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: handler.hello
+  allColumn:
+    handler: src/сontrollers/columnController.allColumn
+    events:
+      - http:
+          path: columns
+          method: get
+          cors: true
+
+  getColumn:
+    handler: src/сontrollers/columnController.getColumn
     events:
       - http:
           method: get
-          path: hello
+          path: getColumn/{id}
+          cors: true
+
+  createColumn:
+    handler: src/сontrollers/columnController.createColumn
+    events:
+      - http:
+          path: createColumn
+          method: post
+          cors: true
+
+  deleteColumn:
+    handler: src/сontrollers/columnController.deleteColumn
+    events:
+      - http:
+          path: deleteCol/{id}
+          method: delete
+          cors: true
+
+  updateColumn:
+    handler: src/сontrollers/columnController.updateColumn
+    events:
+      - http:
+          path: updateCol/{id}
+          method: put
+          cors: true
+
+  allCards:
+    handler: src/сontrollers/cardsController.allCards
+    events:
+      - http:
+          path: cards
+          method: get
+          cors: true
+
+  getCard:
+    handler: src/сontrollers/cardsController.getCard
+    events:
+      - http:
+          method: get
+          path: getCard/{id}
+          cors: true
+
+  createCard:
+    handler: src/сontrollers/cardsController.createCard
+    events:
+      - http:
+          path: createCard
+          method: post
+          cors: true
+
+  deleteCard:
+    handler: src/сontrollers/cardsController.deleteCard
+    events:
+      - http:
+          path: deleteCard/{id}
+          method: delete
+          cors: true
+
+  updateCard:
+    handler: src/сontrollers/cardsController.updateCard
+    events:
+      - http:
+          path: updateCard/{id}
+          method: put
+          cors: true
 
 plugins:
   - serverless-offline

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/repositories/cardsRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/cardsService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/сontrollers/cardsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/columnsRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/columnsRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/columnService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/columnService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сontrollers/callback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/callback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/сontrollers/columnController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/columnController.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="21N6ejW8PGxAvZ8U8q2v3c8RBCZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.17.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/сontrollers" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\KeyUA\Project\server\src\сontrollers" />
+      <recent name="D:\KeyUA\Project\server\src\сontrollers\columns" />
+      <recent name="D:\KeyUA\Project\server\src\services" />
+      <recent name="D:\KeyUA\Project\server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\KeyUA\Project\server\src\services" />
+      <recent name="D:\KeyUA\Project\server\src\сontrollers" />
+      <recent name="D:\KeyUA\Project\server\src\repositories\columns" />
+      <recent name="D:\KeyUA\Project\server\src\repositories" />
+      <recent name="D:\KeyUA\Project\server" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="" />
+      <created>1637769305185</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637769305185</updated>
+      <workItem from="1637769309460" duration="1266000" />
+      <workItem from="1638376443408" duration="2817000" />
+      <workItem from="1638381062802" duration="2481000" />
+      <workItem from="1638393358099" duration="40000" />
+      <workItem from="1638394113089" duration="174000" />
+      <workItem from="1638433650084" duration="11029000" />
+      <workItem from="1638469924925" duration="10659000" />
+      <workItem from="1638518506300" duration="10473000" />
+      <workItem from="1638546219370" duration="6357000" />
+      <workItem from="1638617925145" duration="7579000" />
+      <workItem from="1638657454571" duration="2578000" />
+      <workItem from="1638702924124" duration="2841000" />
+      <workItem from="1638737638197" duration="891000" />
+      <workItem from="1638779539208" duration="18690000" />
+      <workItem from="1638868842968" duration="4316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

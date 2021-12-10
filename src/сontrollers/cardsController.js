@@ -53,7 +53,7 @@ module.exports.createCard = async (event, context, callback) => {
     const params = {
         TableName: CARDS_TABLE,
         Item: {
-            id: +Date.now(),
+            id: data.id,
             index: data.index,
             title: data.title,
             description: data.description,

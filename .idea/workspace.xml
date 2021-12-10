@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/repositories/cardsRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/cardsService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/сontrollers/cardsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/columnsRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/columnsRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repositories/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/columnService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/columnService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сontrollers/callback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/callback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/сontrollers/columnController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/columnController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +32,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.17.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.3" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.13.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.11.12" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/сontrollers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -90,10 +82,24 @@
       <workItem from="1638737638197" duration="891000" />
       <workItem from="1638779539208" duration="18690000" />
       <workItem from="1638868842968" duration="4316000" />
+      <workItem from="1639046117017" duration="85000" />
+      <workItem from="1639046636919" duration="11298000" />
+      <workItem from="1639132248917" duration="4539000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

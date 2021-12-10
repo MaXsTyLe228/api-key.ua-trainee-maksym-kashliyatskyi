@@ -39,7 +39,7 @@ module.exports.createColumn = async (event, context, callback) => {
     const params = {
         TableName: COLUMN_TABLE,
         Item: {
-            id: +Date.now(),
+            id: data.id,
             index: data.index,
             title: data.title,
         }

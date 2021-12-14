@@ -4,7 +4,7 @@ const COLUMN_TABLE = 'kashliatskyi-columns'
 
 const colValidation = (data, callback) => {
     // validation
-    if (typeof data.title !== "string" || typeof data.index !== "number") {
+    if (typeof data.title !== "string" || typeof data.index !== "string") {
         console.log(typeof data.index, typeof data.title)
         console.error("Validation Failed");
         callback(null, {

@@ -91,5 +91,14 @@ functions:
           method: put
           cors: true
 
+  login:
+    handler: src/cognito/cognitoController.handler
+    events:
+      - http:
+          path: login
+          method: post
+          cors: true
+
+
 plugins:
   - serverless-offline

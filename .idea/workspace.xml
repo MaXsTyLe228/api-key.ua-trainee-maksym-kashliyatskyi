@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cognito/check.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cognito/cognitoController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cognito/logOut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cognito/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сontrollers/cardsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/cardsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сontrollers/columnController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/columnController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -87,7 +93,10 @@
       <workItem from="1639046636919" duration="11298000" />
       <workItem from="1639132248917" duration="8877000" />
       <workItem from="1639387059653" duration="4228000" />
-      <workItem from="1639474193254" duration="8589000" />
+      <workItem from="1639474193254" duration="9318000" />
+      <workItem from="1639560919306" duration="1949000" />
+      <workItem from="1639647648363" duration="4192000" />
+      <workItem from="1639653351208" duration="20903000" />
     </task>
     <servers />
   </component>

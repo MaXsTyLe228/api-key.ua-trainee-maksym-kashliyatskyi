@@ -1,7 +1,7 @@
 const AmazonCognitoIdentity = require("amazon-cognito-identity-js");
 const userPool = require('./userPool')
 
-module.exports.signIn = async (email, password) => {
+module.exports.signUp = async (email, password) => {
 
     const attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute({
         Name: 'email',

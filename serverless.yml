@@ -91,11 +91,27 @@ functions:
           method: put
           cors: true
 
-  login:
-    handler: src/cognito/cognitoController.handler
+  signUp:
+    handler: src/cognito/cognitoController.signUp
     events:
       - http:
-          path: login
+          path: signUp
+          method: post
+          cors: true
+
+  signIn:
+    handler: src/cognito/cognitoController.signIn
+    events:
+      - http:
+          path: signIn
+          method: post
+          cors: true
+
+  logout:
+    handler: src/cognito/cognitoController.logout
+    events:
+      - http:
+          path: logout
           method: post
           cors: true
 

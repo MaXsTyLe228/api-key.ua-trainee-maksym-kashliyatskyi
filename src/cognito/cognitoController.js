@@ -1,8 +1,18 @@
-const CognitoService = require('./signIn')
+const Login = require('./signUp')
+const Auth = require('./signIn')
+const LogOut = require('./logout')
 
-exports.handler = async (event, context, callback) => {
+exports.signUp = async (event, context, callback) => {
     const data = JSON.parse(event.body);
-    /*const email = 'kashlyatsky@gmail.com' ;
-    const password = '12345678'*/
-    return await CognitoService.signIn(data.email, data.password)
+    return await Login.signUp(data.email, data.password)
+};
+
+exports.signIn = async (event, context, callback) => {
+    const data = JSON.parse(event.body);
+    return await Auth.signIn(data.email, data.password)
+};
+
+exports.logout = async (event, context, callback) => {
+    const data = JSON.parse(event.body);
+    return await LogOut.logout(data.refreshToken, data.username)
 };

@@ -18,6 +18,8 @@ functions:
           path: columns
           method: get
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   getColumn:
     handler: src/сontrollers/columnController.getColumn
@@ -26,6 +28,9 @@ functions:
           method: get
           path: getColumn/{id}
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
   createColumn:
     handler: src/сontrollers/columnController.createColumn
@@ -34,6 +39,8 @@ functions:
           path: createColumn
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   deleteColumn:
     handler: src/сontrollers/columnController.deleteColumn
@@ -42,6 +49,8 @@ functions:
           path: deleteCol/{id}
           method: delete
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   updateColumn:
     handler: src/сontrollers/columnController.updateColumn
@@ -50,6 +59,8 @@ functions:
           path: updateCol/{id}
           method: put
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   allCards:
     handler: src/сontrollers/cardsController.allCards
@@ -58,6 +69,8 @@ functions:
           path: cards
           method: get
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   getCard:
     handler: src/сontrollers/cardsController.getCard
@@ -66,6 +79,8 @@ functions:
           method: get
           path: getCard/{id}
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   createCard:
     handler: src/сontrollers/cardsController.createCard
@@ -74,6 +89,8 @@ functions:
           path: createCard
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   deleteCard:
     handler: src/сontrollers/cardsController.deleteCard
@@ -82,6 +99,8 @@ functions:
           path: deleteCard/{id}
           method: delete
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   updateCard:
     handler: src/сontrollers/cardsController.updateCard
@@ -90,6 +109,8 @@ functions:
           path: updateCard/{id}
           method: put
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   signUp:
     handler: src/cognito/cognitoController.signUp

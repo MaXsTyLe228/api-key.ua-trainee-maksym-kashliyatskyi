@@ -9,6 +9,8 @@ exports.signUp = async (event, context, callback) => {
 
 exports.signIn = async (event, context, callback) => {
     const data = JSON.parse(event.body);
+    //console.log(process.env.CLIENT_ID)
+    //console.log(process.env.USER_POOL_ID)
     return await Auth.signIn(data.email, data.password)
 };
 

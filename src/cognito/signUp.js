@@ -3,6 +3,7 @@ const userPool = require('./userPool')
 
 module.exports.signUp = async (email, password) => {
 
+
     const attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute({
         Name: 'email',
         Value: email// your email here

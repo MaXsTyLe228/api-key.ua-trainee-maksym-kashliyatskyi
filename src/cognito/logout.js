@@ -7,7 +7,7 @@ const cognitoISP = new AWS.CognitoIdentityServiceProvider({
 module.exports.logout = async (refreshToken, userName) => {
 
     const token = {
-        ClientId: '6kom8cbnmosu3ab5iorcdoglrl',
+        ClientId: process.env.CLIENT_ID,
         Token: refreshToken,
     };
 

@@ -10,9 +10,4 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({
     UserPoolId: USER_POOL_ID,
     ClientId: CLIENT_ID
 })
-// const sda = () => {
-//     console.log(USER_POOL_ID)
-//     console.log(CLIENT_ID)
-// }
-// sda();
 module.exports = userPool;

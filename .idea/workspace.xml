@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cognito/cognitoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cognito/cognitoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cognito/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cognito/signIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cognito/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cognito/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cognito/userPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cognito/userPool.js" afterDir="false" />
-    </list>
+    <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +93,7 @@
       <workItem from="1639647648363" duration="4192000" />
       <workItem from="1639653351208" duration="21182000" />
       <workItem from="1639990148856" duration="11597000" />
-      <workItem from="1640078663380" duration="5137000" />
+      <workItem from="1640078663380" duration="5448000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,3 @@
-org: maxstyle
-app: server
 service: server
 
 frameworkVersion: '2 || 3'

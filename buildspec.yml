@@ -8,4 +8,5 @@ phases:
       - pip install --upgrade awscli
   build:
     commands:
+      - serverless login
       - sls deploy -s dev --verbose

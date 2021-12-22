@@ -13,6 +13,13 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
+  healthCheck:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+
   allColumn:
     handler: src/сontrollers/columnController.allColumn
     events:

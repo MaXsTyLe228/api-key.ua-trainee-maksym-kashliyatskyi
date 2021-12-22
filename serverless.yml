@@ -17,7 +17,6 @@ functions:
       - http:
           path: columns
           method: get
-          cors: true
 
   getColumn:
     handler: src/сontrollers/columnController.getColumn
@@ -57,7 +56,6 @@ functions:
       - http:
           path: cards
           method: get
-          cors: true
 
   getCard:
     handler: src/сontrollers/cardsController.getCard

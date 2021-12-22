@@ -11,4 +11,3 @@ phases:
     commands:
       - serverless login
       - sls deploy -s dev --verbose
-      - aws s3 sync s3://maks-api-dev

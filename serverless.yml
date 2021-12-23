@@ -1,6 +1,4 @@
-org: maxstyle
-app: server
-service: server
+service: uashdkuahda
 
 frameworkVersion: '2 || 3'
 
@@ -8,9 +6,18 @@ frameworkVersion: '2 || 3'
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: dev
+  region: us-east-2
   lambdaHashingVersion: 20201221
 
 functions:
+  healthCheck:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+
   allColumn:
     handler: src/сontrollers/columnController.allColumn
     events:
@@ -20,6 +27,7 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
   getColumn:
     handler: src/сontrollers/columnController.getColumn
@@ -71,6 +79,7 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
   getCard:
     handler: src/сontrollers/cardsController.getCard

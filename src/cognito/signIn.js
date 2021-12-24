@@ -34,12 +34,10 @@ module.exports.signIn = async (email, password) => {
                 }
                 return resolve({
                     statusCode: 200,
-                    // headers: {
-                    //     "Access-Control-Allow-Credentials": true,
-                    //     "Access-Control-Allow-Origin" : "*",
-                    //     "Access-Control-Allow-Methods" : "GET, POST",
-                    //     "Content-Type": "application/json",
-                    // },
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Credentials': true,
+                    },
                     body: JSON.stringify(decodeJWTToken(token))
                 });
             },

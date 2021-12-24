@@ -29,6 +29,7 @@ functions:
       - http:
           path: /
           method: get
+          cors: true
 
   allColumn:
     handler: src/сontrollers/columnController.allColumn
@@ -141,6 +142,7 @@ functions:
           path: signIn
           method: post
           cors: true
+            allowCredentials: true
 
   logout:
     handler: src/cognito/cognitoController.logout

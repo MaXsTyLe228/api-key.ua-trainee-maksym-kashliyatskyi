@@ -32,7 +32,13 @@ module.exports.signIn = async (email, password) => {
                     idToken: result.getIdToken().getJwtToken(),
                     refreshToken: result.getRefreshToken().getToken(),
                 }
-                return resolve({statusCode: 200, body: JSON.stringify(decodeJWTToken(token))});
+                return resolve({
+                    statusCode: 200,
+                    headers: {
+                        "Access-Control-Allow-Origin": "*"
+                    },
+                    body: JSON.stringify(decodeJWTToken(token))
+                });
             },
 
             onFailure: (err) => {

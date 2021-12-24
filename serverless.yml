@@ -142,7 +142,7 @@ functions:
           path: signIn
           method: post
           cors:
-            origin: 'http://localhost:8080'
+            origin: 'http://maks-ui-dev.s3-website.us-east-2.amazonaws.com'
             headers: # <-- Specify allowed headers
               - Content-Type
               - X-Amz-Date

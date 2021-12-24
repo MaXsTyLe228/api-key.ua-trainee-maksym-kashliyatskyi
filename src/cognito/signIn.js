@@ -35,7 +35,7 @@ module.exports.signIn = async (email, password) => {
                 return resolve({
                     statusCode: 200,
                     headers: {
-                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Origin': 'http://maks-ui-dev.s3-website.us-east-2.amazonaws.com',
                         'Access-Control-Allow-Credentials': true,
                     },
                     body: JSON.stringify(decodeJWTToken(token))

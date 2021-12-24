@@ -140,8 +140,7 @@ functions:
       - http:
           path: signIn
           method: post
-          cors:
-            origin: '*'
+          cors: true
 
   logout:
     handler: src/cognito/cognitoController.logout

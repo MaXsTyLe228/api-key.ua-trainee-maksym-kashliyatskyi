@@ -142,7 +142,15 @@ functions:
           path: signIn
           method: post
           cors:
-            origin: 'https://v2hl01gc6g.execute-api.us-east-2.amazonaws.com/dev/signIn'
+            origin: '*'
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
 
   logout:
     handler: src/cognito/cognitoController.logout

@@ -142,14 +142,7 @@ functions:
           path: signIn
           method: post
           cors:
-            origin: 'http://maks-ui-dev.s3-website.us-east-2.amazonaws.com'
-            headers: # <-- Specify allowed headers
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
+            origin: 'https://v2hl01gc6g.execute-api.us-east-2.amazonaws.com/dev/signIn'
 
   logout:
     handler: src/cognito/cognitoController.logout

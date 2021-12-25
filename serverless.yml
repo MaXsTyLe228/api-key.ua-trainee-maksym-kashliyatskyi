@@ -141,16 +141,7 @@ functions:
       - http:
           path: signIn
           method: post
-          cors:
-            origin: '*'
-            headers: # <-- Specify allowed headers
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: false
+          cors: true
 
   logout:
     handler: src/cognito/cognitoController.logout

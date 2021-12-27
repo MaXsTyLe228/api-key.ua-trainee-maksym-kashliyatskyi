@@ -34,10 +34,7 @@ module.exports.signIn = async (email, password) => {
                 }
                 return resolve({
                     statusCode: 200,
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Credentials': true,
-                    },
+                    headers: {"Access-Control-Allow-Origin": "*"},
                     body: JSON.stringify(decodeJWTToken(token))
                 });
             },
@@ -45,10 +42,8 @@ module.exports.signIn = async (email, password) => {
             onFailure: (err) => {
                 return resolve({
                     statusCode: 400,
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Credentials': true,
-                    }, body: JSON.stringify(err)
+                    headers: {"Content-Type": "text/plain"},
+                    body: JSON.stringify(err)
                 });
             },
         });

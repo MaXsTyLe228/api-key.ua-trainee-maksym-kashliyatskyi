@@ -22,6 +22,17 @@ resources:
         RestApiId:
           Ref: 'ApiGatewayRestApi'
 
+    CognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: ${self:provider.stage}-user-pool
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: ${self:provider.stage}-user-pool-client
+        UserPoolId:
+          Ref: CognitoUserPool
+
 functions:
   healthCheck:
     handler: handler.hello
@@ -38,8 +49,6 @@ functions:
           path: columns
           method: get
           cors: true
-          authorizer:
-            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
 
   getColumn:

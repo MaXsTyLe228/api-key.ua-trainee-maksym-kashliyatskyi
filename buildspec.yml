@@ -9,4 +9,3 @@ phases:
   build:
     commands:
       - sls deploy -s dev --verbose
-      - env

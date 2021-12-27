@@ -120,6 +120,9 @@ functions:
 
   signIn:
     handler: src/cognito/cognitoController.signIn
+    environment:
+      CLIENT_ID: ${ssm:/${opt:stage, 'dev'}/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/${opt:stage, 'dev'}/MAKS_COGNITO_USER_POOL_ID}
     events:
       - http:
           path: signIn

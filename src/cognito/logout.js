@@ -15,7 +15,7 @@ module.exports.logout = async (refreshToken, userName) => {
         cognitoISP.revokeToken(token,
             (err, data) => {
                 if (err) {
-                    return resolve({
+                    resolve({
                         statusCode: 422,
                         loggedIn: true,
                         pageTitle: 'Authenticated',
@@ -26,9 +26,10 @@ module.exports.logout = async (refreshToken, userName) => {
                         userName: userName
                     });
                 } else {
-                    return resolve({
+                    resolve({
                         statusCode: 200,
                         loggedIn: false,
+                        headers: {"Access-Control-Allow-Origin": "*"},
                         pageTitle: 'Login',
                         body: JSON.stringify(data)
                     });

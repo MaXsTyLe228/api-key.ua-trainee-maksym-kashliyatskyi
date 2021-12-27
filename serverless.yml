@@ -9,7 +9,6 @@ provider:
   stage: dev
   region: us-east-2
   lambdaHashingVersion: 20201221
-  variablesResolutionMode: 20210326
   iamRoleStatements:
     - Effect: "Allow"
       Action:

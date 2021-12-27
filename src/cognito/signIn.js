@@ -43,7 +43,13 @@ module.exports.signIn = async (email, password) => {
             },
 
             onFailure: (err) => {
-                return resolve({statusCode: 400, body: JSON.stringify(err)});
+                return resolve({
+                    statusCode: 400,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Credentials': true,
+                    }, body: JSON.stringify(err)
+                });
             },
         });
     });

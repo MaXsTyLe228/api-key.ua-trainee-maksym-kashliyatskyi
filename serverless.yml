@@ -70,8 +70,6 @@ functions:
           path: createColumn
           method: post
           cors: true
-          authorizer:
-            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   deleteColumn:
     handler: src/сontrollers/columnController.deleteColumn

@@ -133,6 +133,8 @@ functions:
 
   logout:
     handler: src/cognito/cognitoController.logout
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
     events:
       - http:
           path: logout

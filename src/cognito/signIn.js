@@ -38,7 +38,6 @@ module.exports.signIn = async (email, password) => {
                     body: JSON.stringify(decodeJWTToken(token))
                 });
             },
-
             onFailure: (err) => {
                 resolve({
                     statusCode: 400,

@@ -18,9 +18,13 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
+        -cognito-identity:*
+        -cognito-sync:*
+        -cognito-idp:*
       Resource:
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-columns
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-card
+        - arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
 resources:
   Resources:

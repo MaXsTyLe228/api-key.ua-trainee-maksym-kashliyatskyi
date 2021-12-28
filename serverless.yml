@@ -87,6 +87,8 @@ functions:
           path: cards
           method: get
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   createCard:
     handler: src/сontrollers/cardsController.createCard

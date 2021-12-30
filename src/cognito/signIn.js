@@ -32,23 +32,17 @@ module.exports.signIn = async (email, password) => {
                     idToken: result.getIdToken().getJwtToken(),
                     refreshToken: result.getRefreshToken().getToken(),
                 }
-                return resolve({
+                resolve({
                     statusCode: 200,
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Credentials': true,
-                    },
+                    headers: {"Access-Control-Allow-Origin": "*"},
                     body: JSON.stringify(decodeJWTToken(token))
                 });
             },
-
             onFailure: (err) => {
-                return resolve({
+                resolve({
                     statusCode: 400,
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Credentials': true,
-                    }, body: JSON.stringify(err)
+                    headers: {"Content-Type": "text/plain"},
+                    body: JSON.stringify(err)
                 });
             },
         });

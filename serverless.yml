@@ -18,9 +18,14 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
+        - cognito-identity:*
+        - cognito-sync:*
+        - cognito-idp:*
+        - ssm:GetParameter
       Resource:
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-columns
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-card
+        - arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
 resources:
   Resources:
@@ -50,18 +55,8 @@ functions:
           path: columns
           method: get
           cors: true
-
-
-  getColumn:
-    handler: src/сontrollers/columnController.getColumn
-    events:
-      - http:
-          method: get
-          path: getColumn/{id}
-          cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
-
 
   createColumn:
     handler: src/сontrollers/columnController.createColumn
@@ -100,15 +95,6 @@ functions:
           path: cards
           method: get
           cors: true
-
-
-  getCard:
-    handler: src/сontrollers/cardsController.getCard
-    events:
-      - http:
-          method: get
-          path: getCard/{id}
-          cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
@@ -145,6 +131,9 @@ functions:
 
   signIn:
     handler: src/cognito/cognitoController.signIn
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
     events:
       - http:
           path: signIn
@@ -153,6 +142,9 @@ functions:
 
   logout:
     handler: src/cognito/cognitoController.logout
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
     events:
       - http:
           path: logout

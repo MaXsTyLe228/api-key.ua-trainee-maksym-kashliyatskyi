@@ -4,10 +4,12 @@ const cognitoISP = new AWS.CognitoIdentityServiceProvider({
     region: 'us-east-2'
 });
 
+const ClientId = process.env.CLIENT_ID;
+
 module.exports.logout = async (refreshToken, userName) => {
 
     const token = {
-        ClientId: process.env.CLIENT_ID,
+        ClientId: ClientId,
         Token: refreshToken,
     };
 
@@ -15,21 +17,14 @@ module.exports.logout = async (refreshToken, userName) => {
         cognitoISP.revokeToken(token,
             (err, data) => {
                 if (err) {
-                    return resolve({
+                    resolve({
                         statusCode: 422,
-                        loggedIn: true,
-                        pageTitle: 'Authenticated',
                         body: JSON.stringify(err),
-                        token: '',
-                        accessToken: '',
-                        refreshToken: refreshToken,
-                        userName: userName
                     });
                 } else {
-                    return resolve({
+                    resolve({
                         statusCode: 200,
-                        loggedIn: false,
-                        pageTitle: 'Login',
+                        headers: {"Access-Control-Allow-Origin": "*"},
                         body: JSON.stringify(data)
                     });
                 }

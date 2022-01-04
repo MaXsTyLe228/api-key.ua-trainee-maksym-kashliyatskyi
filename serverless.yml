@@ -140,6 +140,17 @@ functions:
           method: post
           cors: true
 
+  signUp:
+    handler: src/cognito/cognitoController.signUp
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
+    events:
+      - http:
+          path: signUp
+          method: post
+          cors: true
+
   logout:
     handler: src/cognito/cognitoController.logout
     environment:

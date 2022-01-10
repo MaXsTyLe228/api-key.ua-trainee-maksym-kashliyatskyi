@@ -18,6 +18,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
+        - s3:*
         - cognito-identity:*
         - cognito-sync:*
         - cognito-idp:*

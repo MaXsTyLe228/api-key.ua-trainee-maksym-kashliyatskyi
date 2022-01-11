@@ -27,6 +27,7 @@ provider:
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-columns
         - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-card
         - arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+        - arn:aws:s3:::maks-trello-files
 
 resources:
   Resources:
@@ -174,6 +175,30 @@ functions:
           method: post
           cors: true
 
+
+  getS3Object:
+    handler: src/s3/s3Controller.getObject
+    events:
+      - http:
+          path: getObject
+          method: post
+          cors: true
+
+  putS3Object:
+    handler: src/s3/s3Controller.putObject
+    events:
+      - http:
+          path: putObject
+          method: post
+          cors: true
+
+  deleteS3Object:
+    handler: src/s3/s3Controller.deleteFile
+    events:
+      - http:
+          path: deleteObject
+          method: post
+          cors: true
 
 
 plugins:

@@ -1,19 +1,20 @@
 const AWS = require('aws-sdk')
 
-const s3 = new AWS.S3()
-AWS.config.update({
-    signatureVersion: 'v4',
-    region: "us-east-2",
-})
+module.exports.getS3 = async (myKey) => {
+    const s3 = new AWS.S3({
+        endpoint: 's3-us-east-2.amazonaws.com',
+        signatureVersion: 'v4',
+        region: 'us-east-2'
+    });
+    const signedUrlExpireSeconds = 60 * 5
+    const myBucket = 'maks-trello-files'
 
-const myBucket = 'maks-trello-files'
-const myKey = 'Screenshot from 2021-12-14 18-07-53.png'
-const signedUrlExpireSeconds = 60 * 5 // your expiry time in seconds.
-
-const url = s3.getSignedUrl('getObject', {
-    Bucket: myBucket,
-    Key: myKey,
-    Expires: signedUrlExpireSeconds
-})
-
-console.log(url)
+    return new Promise(resolve => {
+        const url = s3.getSignedUrl('getObject', {
+            Bucket: myBucket,
+            Key: myKey,
+            Expires: signedUrlExpireSeconds
+        })
+        return resolve({statusCode: 200, body: JSON.stringify(url)})
+    })
+}

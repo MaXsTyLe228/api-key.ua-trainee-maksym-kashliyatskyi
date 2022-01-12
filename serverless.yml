@@ -183,6 +183,9 @@ functions:
           path: getObject
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
   putS3Object:
     handler: src/s3/s3Controller.putObject
@@ -191,6 +194,9 @@ functions:
           path: putObject
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
   deleteS3Object:
     handler: src/s3/s3Controller.deleteFile
@@ -199,6 +205,9 @@ functions:
           path: deleteObject
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
 
 
 plugins:

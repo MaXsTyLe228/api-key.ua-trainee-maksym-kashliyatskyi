@@ -6,7 +6,7 @@ const CARDS_TABLE = 'kashliatskyi-card'
 const myBucket = 'maks-trello-files'
 
 module.exports.deleteFile = async (key, idCard) => {
-    const s3 = new AWS.S3({
+    let s3 = new AWS.S3({
         endpoint: 's3-us-east-2.amazonaws.com',
         signatureVersion: 'v4',
         region: 'us-east-2'
@@ -27,9 +27,12 @@ module.exports.deleteFile = async (key, idCard) => {
     const res = await cardsService.updateCardService(params);
 
     return new Promise(async resolve => {
-        const data = s3.deleteObject({
+        s3.deleteObject({
             Bucket: myBucket,
             Key: key
+        }, function (err, data) {
+            if (err) console.log(err, err.stack);  // error
+            else console.log('deleted');                 // deleted
         });
         return resolve({
             statusCode: 200, body: JSON.stringify({

@@ -35,7 +35,9 @@ module.exports.deleteFile = async (key, idCard) => {
             else console.log('deleted');                 // deleted
         });
         return resolve({
-            statusCode: 200, body: JSON.stringify({
+            statusCode: 200,
+            headers: {"Access-Control-Allow-Origin": "*"},
+            body: JSON.stringify({
                 card: res,
             })
         })

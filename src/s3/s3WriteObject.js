@@ -36,7 +36,9 @@ module.exports.uploadFile = async (myKey, idCard) => {
             Expires: signedUrlExpireSeconds
         })
         return resolve({
-            statusCode: 200, body: JSON.stringify({
+            statusCode: 200,
+            headers: {"Access-Control-Allow-Origin": "*"},
+            body: JSON.stringify({
                 url: url,
                 card: res
             })

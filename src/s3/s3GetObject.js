@@ -15,6 +15,10 @@ module.exports.getS3 = async (myKey) => {
             Key: myKey,
             Expires: signedUrlExpireSeconds
         })
-        return resolve({statusCode: 200, body: JSON.stringify(url)})
+        return resolve({
+            statusCode: 200,
+            headers: {"Access-Control-Allow-Origin": "*"},
+            body: JSON.stringify(url)
+        })
     })
 }

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/__tests__/cardValidation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/colValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/s3/s3DeleteObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/s3/s3DeleteObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/s3/s3GetObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/s3/s3GetObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/s3/s3WriteObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/s3/s3WriteObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +108,7 @@
       <workItem from="1641809889409" duration="6378000" />
       <workItem from="1641897171933" duration="17781000" />
       <workItem from="1641984647013" duration="9917000" />
+      <workItem from="1642005684280" duration="3269000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,9 @@ describe("Column Validation", () => {
 });
 
 const colValidation = (data) => {
-    if (typeof data.title !== "string" || typeof data.index !== "string" || isNaN(data.index) === true)
+    if (typeof data.title !== "string" ||
+        typeof data.index !== "string" ||
+        isNaN(data.index) === true)
         return false
     else return true
 }

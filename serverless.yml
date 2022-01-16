@@ -1,6 +1,4 @@
-org: maxstyle
-app: server
-service: server
+service: uashdkuahda
 
 frameworkVersion: '2 || 3'
 
@@ -8,9 +6,50 @@ frameworkVersion: '2 || 3'
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: dev
+  region: us-east-2
   lambdaHashingVersion: 20201221
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - s3:*
+        - cognito-identity:*
+        - cognito-sync:*
+        - cognito-idp:*
+        - ssm:GetParameter
+      Resource:
+        - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-columns
+        - arn:aws:dynamodb:us-east-2:666398651410:table/kashliatskyi-card
+        - arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+        - arn:aws:s3:::maks-trello-files/*
+
+resources:
+  Resources:
+    GatewayResponseDefault4XX:
+      Type: 'AWS::ApiGateway::GatewayResponse'
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_4XX
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'
 
 functions:
+  healthCheck:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
+
   allColumn:
     handler: src/сontrollers/columnController.allColumn
     events:
@@ -18,14 +57,8 @@ functions:
           path: columns
           method: get
           cors: true
-
-  getColumn:
-    handler: src/сontrollers/columnController.getColumn
-    events:
-      - http:
-          method: get
-          path: getColumn/{id}
-          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   createColumn:
     handler: src/сontrollers/columnController.createColumn
@@ -34,6 +67,8 @@ functions:
           path: createColumn
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   deleteColumn:
     handler: src/сontrollers/columnController.deleteColumn
@@ -42,6 +77,8 @@ functions:
           path: deleteCol/{id}
           method: delete
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   updateColumn:
     handler: src/сontrollers/columnController.updateColumn
@@ -50,6 +87,8 @@ functions:
           path: updateCol/{id}
           method: put
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   allCards:
     handler: src/сontrollers/cardsController.allCards
@@ -58,14 +97,8 @@ functions:
           path: cards
           method: get
           cors: true
-
-  getCard:
-    handler: src/сontrollers/cardsController.getCard
-    events:
-      - http:
-          method: get
-          path: getCard/{id}
-          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   createCard:
     handler: src/сontrollers/cardsController.createCard
@@ -74,6 +107,8 @@ functions:
           path: createCard
           method: post
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   deleteCard:
     handler: src/сontrollers/cardsController.deleteCard
@@ -82,6 +117,8 @@ functions:
           path: deleteCard/{id}
           method: delete
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
 
   updateCard:
     handler: src/сontrollers/cardsController.updateCard
@@ -90,6 +127,88 @@ functions:
           path: updateCard/{id}
           method: put
           cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
+
+  signIn:
+    handler: src/cognito/cognitoController.signIn
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
+    events:
+      - http:
+          path: signIn
+          method: post
+          cors: true
+
+  signUp:
+    handler: src/cognito/cognitoController.signUp
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
+    events:
+      - http:
+          path: signUp
+          method: post
+          cors: true
+
+  logout:
+    handler: src/cognito/cognitoController.logout
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
+    events:
+      - http:
+          path: logout
+          method: post
+          cors: true
+
+  refresh:
+    handler: src/cognito/cognitoController.refresh
+    environment:
+      CLIENT_ID: ${ssm:/MAKS_COGNITO_CLIENT_ID}
+      USER_POOL_ID: ${ssm:/MAKS_COGNITO_USER_POOL_ID}
+    events:
+      - http:
+          path: refresh
+          method: post
+          cors: true
+
+
+  getS3Object:
+    handler: src/s3/s3Controller.getObject
+    events:
+      - http:
+          path: getObject
+          method: post
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
+
+  putS3Object:
+    handler: src/s3/s3Controller.putObject
+    events:
+      - http:
+          path: putObject
+          method: post
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
+
+  deleteS3Object:
+    handler: src/s3/s3Controller.deleteFile
+    events:
+      - http:
+          path: deleteObject
+          method: post
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-2:666398651410:userpool/us-east-2_HYPeBfIpZ
+
+
 
 plugins:
   - serverless-offline

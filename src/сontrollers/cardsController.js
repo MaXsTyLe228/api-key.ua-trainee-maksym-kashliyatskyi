@@ -6,7 +6,7 @@ const CARDS_TABLE = 'kashliatskyi-card'
 const colValidation = (data, callback) => {
     // validation
     if (typeof data.title !== "string" ||
-        typeof data.index !== "number" ||
+        typeof data.index !== "string" ||
         typeof data.description !== "string" ||
         typeof data.idCol !== "number") {
         console.error("Validation Failed");

@@ -6,7 +6,7 @@ module.exports.hello = async (event) => {
         body: JSON.stringify(
             {
                 message: 'works',
-                //input: event,
+                input: event,
             },
             null,
             2

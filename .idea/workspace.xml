@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/сontrollers/columnController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/сontrollers/columnController.js" afterDir="false" />
-    </list>
+    <list default="true" id="f336275d-d673-434e-9c44-8eb56fe2785a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/2022/UnitTests" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -32,20 +34,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="16.13.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="16.11.12" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/сontrollers" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.18.2" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.18.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\KeyUA\Project\server\src\сontrollers" />
       <recent name="D:\KeyUA\Project\server\src\сontrollers\columns" />
       <recent name="D:\KeyUA\Project\server\src\services" />
@@ -58,6 +62,27 @@
       <recent name="D:\KeyUA\Project\server\src\repositories" />
       <recent name="D:\KeyUA\Project\server" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Column Validation.1" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__tests__/colValidation.js" />
+      <test-names>
+        <test-name value="Column Validation" />
+        <test-name value="1" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Column Validation.1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,7 +109,24 @@
       <workItem from="1638868842968" duration="4316000" />
       <workItem from="1639046117017" duration="85000" />
       <workItem from="1639046636919" duration="11298000" />
-      <workItem from="1639132248917" duration="5205000" />
+      <workItem from="1639132248917" duration="8877000" />
+      <workItem from="1639387059653" duration="4228000" />
+      <workItem from="1639474193254" duration="9318000" />
+      <workItem from="1639560919306" duration="1949000" />
+      <workItem from="1639647648363" duration="4192000" />
+      <workItem from="1639653351208" duration="21182000" />
+      <workItem from="1639990148856" duration="11597000" />
+      <workItem from="1640078663380" duration="17214000" />
+      <workItem from="1640167416573" duration="5697000" />
+      <workItem from="1640599177293" duration="16469000" />
+      <workItem from="1640692648513" duration="4868000" />
+      <workItem from="1641377154361" duration="4335000" />
+      <workItem from="1641809889409" duration="6378000" />
+      <workItem from="1641897171933" duration="17781000" />
+      <workItem from="1641984647013" duration="9917000" />
+      <workItem from="1642005684280" duration="3269000" />
+      <workItem from="1642071940303" duration="6129000" />
+      <workItem from="1642160812545" duration="789000" />
     </task>
     <servers />
   </component>
